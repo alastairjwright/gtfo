@@ -108,8 +108,12 @@ foreach ($info_data as $key => $row) {
 	<img id="logo" src="./assets/images/logo.jpg">
 
 	<div class="list">
-		<?php echo '<h1>'.round($current_temp_mertric).'°C ('.round($current_temp_imperial).'°F) '.$current_weather_emoji.'</h1>'; ?>
-		<?php echo '<p>'.$days_text[date("N")][0].'</p>'; ?>
+		<?php
+			if (isset($current_temp_mertric) && isset($current_temp_imperial) && isset($days_text)) {
+				echo '<h1>'.round($current_temp_mertric).'°C ('.round($current_temp_imperial).'°F) '.$current_weather_emoji.'</h1>';
+				echo '<p>'.$days_text[date("N")][0].'</p>';
+			}
+		?>
 		<?php echo $list_html; ?>
 	</div>
 
