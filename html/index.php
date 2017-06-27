@@ -15,6 +15,7 @@
 	<meta property="og:description" content="GTFO is a current list of stuff to do in NYC. We try to let you know about stuff before it sells out." />
 	<meta property="og:url" content="http://gtfo-nyc.com/" />
 	<meta property="og:site_name" content="GTFO.nyc" />
+	<meta property="og:image" content="http://gtfo-nyc.com/assets/images/logo-large.jpg" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:description" content="GTFO is a current list of stuff to do in NYC. We try to let you know about stuff before it sells out." />
 	<meta name="twitter:title" content="GTFO.nyc" />
