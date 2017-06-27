@@ -43,12 +43,19 @@ function rearrange($spreadsheet_data) {
 $list_data = rearrange(openSheet("https://docs.google.com/spreadsheets/d/1XH7dhbLBM7yQvZ4MoWbIZ4WaJ2jw0Vj1B9xezkimBVU/pub?gid=0&single=true&output=csv"));
 $info_data = rearrange(openSheet("https://docs.google.com/spreadsheets/d/1XH7dhbLBM7yQvZ4MoWbIZ4WaJ2jw0Vj1B9xezkimBVU/pub?gid=2052396963&single=true&output=csv"));
 $weather_data = openSheet("https://docs.google.com/spreadsheets/d/1XH7dhbLBM7yQvZ4MoWbIZ4WaJ2jw0Vj1B9xezkimBVU/pub?gid=1439033665&single=true&output=csv");
+$days_data = openSheet("https://docs.google.com/spreadsheets/d/1XH7dhbLBM7yQvZ4MoWbIZ4WaJ2jw0Vj1B9xezkimBVU/pub?gid=379627954&single=true&output=csv");
 $weather_api_data = json_decode(file_get_contents("http://api.openweathermap.org/data/2.5/weather?zip=11216,us&units=imperial&appid=aed09d2972194babc2f6de6803a782fc"));
 
 $weather_icons = array();
 foreach ($weather_data as $key => $row) {
 	if (!array_key_exists($row[3], $weather_icons)) $weather_icons[$row[3]] = array();
 	array_push($weather_icons[$row[3]], $row[4]);
+}
+
+$days_text = array();
+foreach ($days_data as $key => $row) {
+	if (!array_key_exists($row[0], $days_text)) $days_text[$row[0]] = array();
+	array_push($days_text[$row[0]], $row[1]);
 }
 
 $current_temp_imperial = $weather_api_data->main->temp;
@@ -66,14 +73,6 @@ foreach ($list_data as $key => $row) {
 		foreach ($row as $key => $cell) {
 			if ($key === 1) {
 				$banner = $cell;
-			}
-		}
-	} elseif ($key === 1){ // weather
-		foreach ($row as $key => $cell) {
-			if ($key === 0) {
-				$list_html .= '<h1>'.round($current_temp_mertric).'°C ('.round($current_temp_imperial).'°F) '.$current_weather_emoji.'</h1>';
-			} else {
-				$list_html .= '<p>'.$cell.'</p>';
 			}
 		}
 	} else {
@@ -109,6 +108,8 @@ foreach ($info_data as $key => $row) {
 	<img id="logo" src="./assets/images/logo.jpg">
 
 	<div class="list">
+		<?php echo '<h1>'.round($current_temp_mertric).'°C ('.round($current_temp_imperial).'°F) '.$current_weather_emoji.'</h1>'; ?>
+		<?php echo '<p>'.$days_text[date("N")][0].'</p>'; ?>
 		<?php echo $list_html; ?>
 	</div>
 
