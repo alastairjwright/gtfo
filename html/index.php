@@ -2,6 +2,25 @@
 <html>
 <head>
 	<title>GTFO.nyc</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="GTFO is a current list of stuff to do in NYC. We try to let you know about stuff before it sells out.s">
+	<meta name="keywords" content="NYC,New York,List,Activities,things to do">
+	<meta name="author" content="Nirmala Shome">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="GTFO.nyc" />
+	<meta property="og:description" content="GTFO is a current list of stuff to do in NYC. We try to let you know about stuff before it sells out." />
+	<meta property="og:url" content="http://gtfo-nyc.com/" />
+	<meta property="og:site_name" content="GTFO.nyc" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:description" content="GTFO is a current list of stuff to do in NYC. We try to let you know about stuff before it sells out." />
+	<meta name="twitter:title" content="GTFO.nyc" />
+	<meta name="twitter:site" content="@gtfonyc" />
+	<meta name="twitter:creator" content="@gtfonyc" />
+
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto+Mono|Roboto:300,400,700" rel="stylesheet">
 	<link href="assets/styles/main.css" rel="stylesheet" type="text/css">
