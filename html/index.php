@@ -4,6 +4,7 @@
 	<title>GTFO.nyc</title>
 
 	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5">
 	<meta name="description" content="GTFO is a current list of stuff to do in NYC. We try to let you know about stuff before it sells out.s">
 	<meta name="keywords" content="NYC,New York,List,Activities,things to do, NYC Parties, NYC Festivals, NYC shows, Things to do in NYC, Weekend activies, NYC galleries">
 	<meta name="author" content="Nirmala Shome">
