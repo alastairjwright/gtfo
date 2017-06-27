@@ -110,8 +110,10 @@ foreach ($info_data as $key => $row) {
 	<div class="list">
 		<?php
 			if (isset($current_temp_mertric) && isset($current_temp_imperial) && isset($days_text)) {
+				echo '<div>';
 				echo '<h1>'.round($current_temp_mertric).'°C ('.round($current_temp_imperial).'°F) '.$current_weather_emoji.'</h1>';
 				echo '<p>'.$days_text[date("N")][0].'</p>';
+				echo '</div>';
 			}
 		?>
 		<?php echo $list_html; ?>
