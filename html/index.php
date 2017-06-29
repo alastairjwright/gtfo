@@ -1,4 +1,3 @@
-<?php date_default_timezone_set('America/New_York'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,21 +30,16 @@
 
 <?php
 
-function openSheet($url){
-	if(!ini_set('default_socket_timeout', 15)) echo "<!-- unable to change socket timeout -->";
-	if (($handle = fopen($url, "r")) !== FALSE) {
-	    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-	        $list_data[] = $data;
-	    }
-	    fclose($handle);
+date_default_timezone_set('America/New_York');
 
-	    echo '<pre>' . print_r( $data, 1 ) . '</pre>';
+require 'list_data.php';
+require 'info_data.php';
+require 'weather_data.php';
+require 'days_data.php';
+require 'weather_api_data.php';
 
-	    return $list_data;
-	}
-	else
-	    die("Problem reading csv");
-}
+$list_data = rearrange($list_data);
+$info_data = rearrange($info_data);
 
 // rearrange csv data to read vertically
 function rearrange($spreadsheet_data) {
@@ -85,12 +79,6 @@ function AddBB($var) {
 	return $var;
 }
 
-$list_data = rearrange(openSheet("https://docs.google.com/spreadsheets/d/1XH7dhbLBM7yQvZ4MoWbIZ4WaJ2jw0Vj1B9xezkimBVU/pub?gid=0&single=true&output=csv"));
-$info_data = rearrange(openSheet("https://docs.google.com/spreadsheets/d/1XH7dhbLBM7yQvZ4MoWbIZ4WaJ2jw0Vj1B9xezkimBVU/pub?gid=2052396963&single=true&output=csv"));
-$weather_data = openSheet("https://docs.google.com/spreadsheets/d/1XH7dhbLBM7yQvZ4MoWbIZ4WaJ2jw0Vj1B9xezkimBVU/pub?gid=1439033665&single=true&output=csv");
-$days_data = openSheet("https://docs.google.com/spreadsheets/d/1XH7dhbLBM7yQvZ4MoWbIZ4WaJ2jw0Vj1B9xezkimBVU/pub?gid=379627954&single=true&output=csv");
-$weather_api_data = json_decode(file_get_contents("http://api.openweathermap.org/data/2.5/weather?zip=11216,us&units=imperial&appid=aed09d2972194babc2f6de6803a782fc"));
-
 $weather_icons = array();
 foreach ($weather_data as $key => $row) {
 	if (!array_key_exists($row[3], $weather_icons)) $weather_icons[$row[3]] = array();
@@ -103,13 +91,12 @@ foreach ($days_data as $key => $row) {
 	array_push($days_text[$row[0]], $row[1]);
 }
 
+$weather_api_data = json_decode($weather_api_data);
 $current_temp_imperial = $weather_api_data->main->temp;
 $current_temp_mertric = ($current_temp_imperial - 32) * (5/9);
 $current_weather_icon = $weather_api_data->weather[0]->icon;
 $current_weather_icon_code = substr($current_weather_icon, 0, 2);
 $current_weather_emoji = $weather_icons[$current_weather_icon_code][0];
-
-// echo '<pre style="text-align: left">' . print_r( $list_data, 1 ) . '</pre>';
 
 // build list html
 $list_html = "";

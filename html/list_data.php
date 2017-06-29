@@ -1,0 +1,67 @@
+<?php $list_data = array (
+  0 => 
+  array (
+    0 => 'Banner Text',
+    1 => 'SEE 👀',
+    2 => 'MUSIC 🎶',
+    3 => 'LAUNCH 📖',
+    4 => 'EAT 🍽 & DRINK 🍹',
+    5 => 'DANCE 👟 👟',
+    6 => 'WATCH 🎥',
+    7 => 'OUTDOORS 🌳',
+    8 => 'LAUGH 😂',
+    9 => 'THINK 🤔',
+  ),
+  1 => 
+  array (
+    0 => 'A list of stuff that\'s on in NYC - Updated 6/28/17 - To see your ad here contact gtfo.nyc@gmail.com',
+    1 => '[url=http://www.metmuseum.org/exhibitions/listings/2017/rei-kawakubo]Rei Kawakubo/ Comme des Garcons/ Art of the In-Between[/url] show at the Met, and [url=http://www.metmuseum.org/exhibitions/listings/2017/irving-penn-centennial]Irving Penn Centenial[/url] - it\'s worth braving the crowds.',
+    2 => 'Thurs, Aug 17 [url=https://www.residentadvisor.net/event.aspx?982256]Photay\'s Album Launch Release Party[/url] at Baby\'s Alright. Here\'s a [url=spotify:track:4QeRFvicL7zcuVVjRa6UhX]taste[/url].',
+    3 => 'Friday Jun 30, 7PM - 10PM - [url=https://www.facebook.com/events/1572444939455407/]O1 Magazine: Issue#2 Release and Exhibition Opening[/url], named after the O1 visa, featuring people on O1 visas.',
+    4 => 'Newish bar [url=https://diamondreefnyc.com/menu/]Diamond Reef[/url] in Bedstuy, they have a sweet back yard and food truck too.',
+    5 => 'There are only camping tickets left for [url=http://www.sustain-release.com/]Sustain Release YEAR 4[/url], they go on sale Jul 11 at 2PM.',
+    6 => 'Watch [url=https://www.youtube.com/watch?v=OUqfP1S-9ok]The Bad Batch[/url] at [url=https://drafthouse.com/show/the-bad-batch]Alamo Drafthouse[/url] or [url=http://www.ifccenter.com/films/the-bad-batch/]IFC Film Center[/url]. Cannibalism, Body Building and Jason Momoa 🔥 🔥 🔥',
+    7 => '[url=https://www.nybg.org/event/chihuly/]Dale Chihuly[/url] at New York Botanic Gardens.',
+    8 => 'Aug 1 - Aug 24, Dave Chapelle is playing a bunch of shows at Radio City Music Hall with special guests including Chris Rock, Erykah Badu, The Roots and more. [url=http://radiocity.musichall-ny.com/events.php?search_text=dave+chappelle+new+york&gclid=Cj0KEQjwhMjKBRDjxb31j-aesI4BEiQA7ivN-IBnbp9E4YtQkc8VlKKm9j0eDFtuuNMb_KbbiW6Ff1QaArh08P8HAQ]Tickets[/url] are on sale now.',
+    9 => 'It\'s the 2nd year of the [url=https://www.eventbrite.com/e/likeminds-20-tickets-35362516238]Likeminds[/url] camping conference in upstate NY. Early bird tickets now on sale.',
+  ),
+  2 => 
+  array (
+    0 => '',
+    1 => '[url=https://www.gagosian.com/exhibitions/carsten-holler--june-20-2017]Carsten Höller[/url] show at the Gasgonian has it all with giant mushrooms, mirrored revolving doors, abstract paintings, hyperreal little fishes, and huge dice.',
+    2 => 'Tickets for Chance the Rapper go on sale 5:00pm June 26. Get them [url=https://www.axs.com/events/338226/chance-the-rapper-tickets?skin=foresthills]here[/url] before they\'re gone.',
+    3 => '',
+    4 => 'Sat Jul 23, Yes that\'s right it\'s a freaking [url=https://jerkfestivalny.com/]Jamaican Jerk Festival[/url] in Queens!!! Sample the best jerk in town.',
+    5 => 'Sat July 8, It\'s [url=http://fullmoonfest.com/]Full Moon Festival[/url] at Governor\'s Island. Great line up with Kelela, Awesome tapes from Africa, Axel Boman, Mr Fingers and more!',
+    6 => '',
+    7 => 'Venture up to <a href\'="http://stormking.org/visit/]Storm King[/url], as well as seeing the sculptures you can take a [url=http://stormking.org/events/beekeeper-tours-3-2017-07-01/] bee keeping tour [/url] 🐝.',
+    8 => '',
+    9 => '',
+  ),
+  3 => 
+  array (
+    0 => '',
+    1 => '[url=http://www.armoryonpark.org/programs_events/detail/hansel_gretel]Hansel &Gretel[/url] is a new show by Pritzker Prize-winning architects Jacques Herzog and Pierre de Meuron and artist/activist Ai Weiwei just openned at the Park Armory.',
+    2 => 'Clams Casino has just posted a new FREE Instrumentals mixtape. Download it [url=https://clammyclams.wetransfer.com/downloads/6a9875aa76c773fbcc2bfb459cd1640e20170623133435/deee88?utm_source=twitter&utm_medium=clams-tweet&utm_campaign=clamscasino]here[/url].',
+    3 => '',
+    4 => '[url=href="http://dekalbmarkethall.com/#vendors]Dekalb Market Hall[/url] just openned up in Brooklyn and it seriously has ALL the best food. Check it out in Downtown BK.',
+    5 => 'Friday Jun 30, remember pony boy Ginuwine. We\'ll he\'s playing a [url=http://www.cityparksfoundation.org/event/ginuwine-boogie-blind/]free show[/url] at Central Park Summer Stage. 🎠 💦',
+    6 => '',
+    7 => 'A house full of [url=https://www.diaart.org/visit/visit/the-dan-flavin-art-institute-bridgehampton-united-states]Dan Flavin[/url], but you have to trek up to [url=https://www.google.com/maps/place/23+Corwith+Ave,+Bridgehampton,+NY+11932/data=!4m2!3m1!1s0x89e8bddf84640b55:0x6306b479e94d2c9d?sa=X&ved=0ahUKEwiDj8OaxtfUAhVIrD4KHZ9XDrcQ8gEIJzAA] Bridgehampton[/url].',
+    8 => '',
+    9 => '',
+  ),
+  4 => 
+  array (
+    0 => '',
+    1 => '',
+    2 => 'Wed, Oct 11 [url=https://www.axs.com/artists/251590/moses-sumney-tickets]Moses Sumney[/url] is playing a WB Music Hall. You can get tickets on presale now with the code: Moses',
+    3 => '',
+    4 => '[url=http://the-meathook.com/bbq/]The Meat Hook[/url] in WB are doing BBQs every Wed night from 6PM - 9PM, feat. good meat from local farms.',
+    5 => '',
+    6 => '',
+    7 => '',
+    8 => '',
+    9 => '',
+  ),
+); ?>
