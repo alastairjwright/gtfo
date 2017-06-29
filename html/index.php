@@ -58,7 +58,31 @@ function rearrange($spreadsheet_data) {
 			}
 		}
 	}
+
 	return $data;
+}
+
+function AddBB($var) {
+	$search = array(
+		'/\[b\](.*?)\[\/b\]/is',
+		'/\[i\](.*?)\[\/i\]/is',
+		'/\[u\](.*?)\[\/u\]/is',
+		'/\[img\](.*?)\[\/img\]/is',
+		'/\[url\](.*?)\[\/url\]/is',
+		'/\[url\=(.*?)\](.*?)\[\/url\]/is'
+	);
+
+	$replace = array(
+		'<strong>$1</strong>',
+		'<em>$1</em>',
+		'<u>$1</u>',
+		'<img src="$1" />',
+		'<a href="$1">$1</a>',
+		'<a href="$1">$2</a>'
+	);
+
+	$var = preg_replace ($search, $replace, $var);
+	return $var;
 }
 
 $list_data = rearrange(openSheet("https://docs.google.com/spreadsheets/d/1XH7dhbLBM7yQvZ4MoWbIZ4WaJ2jw0Vj1B9xezkimBVU/pub?gid=0&single=true&output=csv"));
@@ -85,7 +109,7 @@ $current_weather_icon = $weather_api_data->weather[0]->icon;
 $current_weather_icon_code = substr($current_weather_icon, 0, 2);
 $current_weather_emoji = $weather_icons[$current_weather_icon_code][0];
 
-// echo '<pre>' . print_r( $weather_icons, 1 ) . '</pre>';
+// echo '<pre style="text-align: left">' . print_r( $list_data, 1 ) . '</pre>';
 
 // build list html
 $list_html = "";
@@ -102,7 +126,7 @@ foreach ($list_data as $key => $row) {
 			if ($key === 0) {
 				$list_html .= '<h1>'.$cell.'</h1>';
 			} else {
-				$list_html .= '<p>'.$cell.'</p>';
+				$list_html .= '<p>'.AddBB($cell).'</p>';
 			}
 
 		}
