@@ -22,7 +22,7 @@
   4 => 
   array (
     0 => '5',
-    1 => 'It\'s Friday fools! 😎',
+    1 => 'Happy Friday!',
   ),
   5 => 
   array (

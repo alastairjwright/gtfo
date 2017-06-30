@@ -91,7 +91,7 @@ foreach ($days_data as $key => $row) {
 	array_push($days_text[$row[0]], $row[1]);
 }
 
-$weather_api_data = json_decode($weather_api_data);
+$weather_api_data = json_decode(file_get_contents("http://api.openweathermap.org/data/2.5/weather?zip=11216,us&units=imperial&appid=aed09d2972194babc2f6de6803a782fc"));
 $current_temp_imperial = $weather_api_data->main->temp;
 $current_temp_mertric = ($current_temp_imperial - 32) * (5/9);
 $current_weather_icon = $weather_api_data->weather[0]->icon;
@@ -141,10 +141,14 @@ foreach ($info_data as $key => $row) {
 
 	<div class="list">
 		<?php
-			if (isset($current_temp_mertric) && isset($current_temp_imperial) && isset($days_text)) {
+			if (isset($current_temp_mertric) || isset($current_temp_imperial) || isset($days_text)) {
 				echo '<div>';
-				echo '<h1>'.round($current_temp_mertric).'°C ('.round($current_temp_imperial).'°F) '.$current_weather_emoji.'</h1>';
-				echo '<p>'.$days_text[date("N")][0].'</p>';
+				if (isset($current_temp_mertric) && isset($current_temp_imperial)) {
+					echo '<h1>'.round($current_temp_mertric).'°C ('.round($current_temp_imperial).'°F) '.$current_weather_emoji.'</h1>';
+				}
+				if (isset($days_text)) {
+					echo '<p>'.$days_text[date("N")][0].'</p>';
+				}
 				echo '</div>';
 			}
 		?>
