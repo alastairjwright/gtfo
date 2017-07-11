@@ -2,7 +2,7 @@
 function openSheet($filename, $url){
 	if(!ini_set('default_socket_timeout', 15)) echo "<!-- unable to change socket timeout -->";
 	if (($handle = fopen($url, "r")) !== FALSE) {
-	    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+	    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
 	        $list_data[] = $data;
 	    }
 	    fclose($handle);
